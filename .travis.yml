@@ -7,7 +7,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t mohabashrafdocker/demo-react-pipeline -f Dockerfile.dev .
+  - docker build -t mohabashrafdocker/demo-react-pipeline -f Dockerfile .
 
 script:
   - docker run -e CI=true mohabashrafdocker/demo-react-pipeline npm run test
