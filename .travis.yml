@@ -1,0 +1,12 @@
+language: generic
+
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t mohabashrafdocker/demo-react-pipeline -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=truemohabashrafdocker/demo-react-pipeline npm run test 
