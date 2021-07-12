@@ -9,4 +9,4 @@ before_install:
   - docker build -t mohabashrafdocker/demo-react-pipeline -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true ohabashrafdocker/demo-react-pipeline npm run test
+  - docker run stephengrider/docker-react npm run test -- --coverage
